@@ -28,6 +28,7 @@ def main():
     print('Папка выбрана успешно.')
     os.chdir(dir_folder) #изменение директории
     while (True):
+        print(f'Текущаю директория: {os.getcwd()}')
         print_menu()
         option = ''
         try:
