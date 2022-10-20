@@ -2,6 +2,7 @@ import os
 import funcs
 
 menu_options = {
+    0: 'Содержимое папки',
     1: 'Создание папки',
     2: 'Удаление папки',
     3: 'Переход во вложенную папку',
@@ -35,7 +36,9 @@ def main():
             option = int(input('Выберите нужную опцию: '))
         except:
             print('Неправильный ввод. Пожалуйста введите число ...')
-        if option == 1:
+        if option == 0:
+            print(funcs.listdir())
+        elif option == 1:
             name = input('Введите название папки: ')
             funcs.create_new_folder(name)
         elif option == 2:
@@ -75,7 +78,7 @@ def main():
             print('Спасибо за использование программы.')
             exit()
         else:
-            print('Недопустимая опция. Пожалуйста введите число от 1 до 12.')
+            print('Недопустимая опция. Пожалуйста введите число от 0 до 12.')
 
 if __name__ == '__main__':
     main()
