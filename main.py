@@ -37,7 +37,7 @@ def main():
         except:
             print('Неправильный ввод. Пожалуйста введите число ...')
         if option == 0:
-            print(funcs.listdir())
+            funcs.listdir()
         elif option == 1:
             name = input('Введите название папки: ')
             funcs.create_new_folder(name)
