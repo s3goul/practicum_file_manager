@@ -43,4 +43,4 @@ def rename_file(name, new_name):
     os.rename(name, new_name)
 
 def listdir():
-    os.listdir(os.getcwd())
+    print(os.listdir(os.getcwd()))
